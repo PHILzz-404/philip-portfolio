@@ -1,0 +1,77 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-white mb-2">Systems & Development</h1>
+        <p class="text-info fw-light text-uppercase" style="letter-spacing: 4px; font-size: 0.8rem;">Technical Project Portfolio</p>
+        <div class="mx-auto" style="width: 40px; height: 3px; background: #00d2ff; border-radius: 2px;"></div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+        {% for project in projects %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-lg project-card"
+                 style="background: #ffffff; border-radius: 12px; overflow: hidden; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);">
+
+                <div style="height: 4px; background: linear-gradient(90deg, #1e3c72, #2a5298, #00d2ff);"></div>
+
+                <div class="card-body p-4 d-flex flex-column">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h5 class="fw-bold m-0" style="color: #1e3c72; letter-spacing: -0.2px;">{{ project.title }}</h5>
+                            <i class="bi bi-code-square text-primary opacity-50"></i>
+                        </div>
+                        <span class="text-muted text-uppercase fw-bold" style="font-size: 0.6rem; letter-spacing: 1px; opacity: 0.8;">
+                            Engineered Module
+                        </span>
+                    </div>
+
+                    <div class="card-text text-muted flex-grow-1 mb-4" style="font-size: 0.88rem; line-height: 1.7; border-left: 2px solid #f0f0f0; padding-left: 1rem;">
+                        {{ project.description|linebreaks }}
+                    </div>
+
+                    <div class="mt-auto">
+                        <div class="p-3 rounded-2 mb-4" style="background-color: #fcfcfc; border: 1px solid #f0f0f0;">
+                            <div class="d-flex align-items-center mb-2">
+                                <div style="width: 8px; height: 8px; background: #00d2ff; border-radius: 50%; margin-right: 8px;"></div>
+                                <small class="text-uppercase fw-bold text-dark" style="font-size: 0.65rem; opacity: 0.6;">Core Stack</small>
+                            </div>
+                            <p class="mb-0 fw-bold" style="color: #1e3c72; font-size: 0.8rem;">
+                                {{ project.tools }}
+                            </p>
+                        </div>
+
+                        <div class="pt-3 border-top">
+                            <div class="text-center">
+                                <p class="mb-0 fw-bold text-dark" style="font-size: 0.8rem; letter-spacing: 1px;">PHILIP ANGELO GALLO</p>
+                                <small class="text-muted text-uppercase" style="font-size: 0.55rem; letter-spacing: 2px;">Lead Software Developer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center text-white py-5">
+            <p class="lead fw-light opacity-50">System directory is currently empty.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.12) !important;
+    }
+
+    .card-text p {
+        margin-bottom: 0.8rem;
+    }
+
+    .card-text p:last-child {
+        margin-bottom: 0;
+    }
+</style>
+{% endblock %}
