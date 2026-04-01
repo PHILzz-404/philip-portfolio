@@ -1,0 +1,78 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-white">About Philip</h1>
+        <p class="text-info fw-bold text-uppercase" style="letter-spacing: 2px;">Computer Science Student | Aspiring Software Engineer</p>
+        <div class="mx-auto" style="width: 60px; height: 4px; background: #00d2ff; border-radius: 2px;"></div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <div class="card h-100 p-4 border-0 shadow-lg" style="background: rgba(255, 255, 255, 0.98); border-radius: 20px;">
+                <div class="card-body text-dark">
+                    <h3 class="fw-bold mb-4" style="color: #1e3c72;">Personal Background</h3>
+                    <p class="lead">
+                        Philip is a Computer Science student at Negros Oriental State University (NORSU) with a focus on high-level problem solving and software architecture.
+                    </p>
+                    <p>
+                        His interest in technology is driven by a desire to understand the underlying logic of complex digital systems. Throughout his academic journey, he has moved beyond theoretical coursework to build functional applications, developing a versatile technical foundation that spans multiple programming languages and environments.
+                    </p>
+                    <p>
+                        With a strong grasp of <strong>C++</strong> and <strong>Python</strong>, Philip enjoys the challenge of debugging intricate logic and optimizing code for efficiency. He views software engineering as a continuous learning process and is dedicated to mastering modern development practices.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <h4 class="fw-bold mb-3" style="color: #1e3c72;">Career Interests & Goals</h4>
+                    <p>
+                        Philip’s primary objective is to become a <strong>Full-Stack Software Engineer</strong>. He is particularly interested in backend development, API integration, and the design of scalable web applications.
+                    </p>
+                    <p>
+                        He is currently refining his expertise in the <strong>Django</strong> and <strong>PHP</strong> frameworks. By leveraging his knowledge of <strong>Networking</strong> and <strong>Systems Administration</strong>, he aims to build robust software solutions that are secure and efficient from the source code to the server deployment.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card p-4 border-0 shadow-lg text-white mb-4" style="background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(12px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                <h4 class="fw-bold mb-3">Software Stack</h4>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary p-2">Python / Django</span>
+                    <span class="badge bg-info text-dark p-2">C++</span>
+                    <span class="badge bg-dark p-2">PHP</span>
+                    <span class="badge bg-success p-2">SQL Databases</span>
+                    <span class="badge bg-warning text-dark p-2">Networking</span>
+                    <span class="badge bg-secondary p-2"> web development </span>
+                    <span class="badge bg-light text-dark p-2">Git / GitHub</span>
+                </div>
+            </div>
+
+            <div class="card p-4 border-0 shadow-lg" style="background: rgba(255, 255, 255, 0.98); border-radius: 20px;">
+                <div class="card-body text-dark">
+                    <h4 class="fw-bold mb-3" style="color: #1e3c72;">Academic Highlights</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <strong>Full-Stack Development:</strong>
+                            Successfully architected and deployed a personal portfolio using Django on PythonAnywhere.
+                        </li>
+                        <li class="mb-3">
+                            <strong>System Logic & Design:</strong>
+                            Engineered multiple functional systems as part of core academic requirements.
+                        </li>
+                        <li class="mb-3">
+                            <strong>Practical Infrastructure:</strong>
+                            Gained hands-on experience in systems troubleshooting and network maintenance during technical training.
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="/projects/" class="btn btn-primary w-100 py-2 fw-bold" style="background: #1e3c72; border: none;">View Project Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

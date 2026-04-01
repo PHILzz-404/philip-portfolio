@@ -1,0 +1,23 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="text-center py-5">
+
+    <img src="{% static 'portfolio/images/phil.jpg' %}"
+         alt="Philip's Profile"
+         class="rounded-circle mb-4 shadow-lg"
+         style="border: 4px solid rgba(255,255,255,0.2); width: 150px; height: 150px; object-fit: cover;">
+
+    <h1 class="display-3 fw-bold mb-3">Hi, I'm Philip 👋</h1>
+    <p class="lead mb-4" style="opacity: 0.9; font-weight: 300;">
+        Computer Science Student | Aspiring Django Developer
+    </p>
+
+    <div class="d-flex justify-content-center gap-3">
+        <a href="/projects/" class="btn btn-light btn-lg px-4 shadow-sm">View My Work</a>
+        <a href="/contact/" class="btn btn-outline-light btn-lg px-4">Contact Me</a>
+    </div>
+</div>
+{% endblock %}
